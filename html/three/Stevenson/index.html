@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>3D Models</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../build/app.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Sanchez:400,400italic" rel="stylesheet" type="text/css">
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+	<script src="../build/app.min.js"></script>
+	<script src="../build/templates.min.js"></script>
+
+</head>
+
+<body>
+	<div ng-app="roomViewer">
+		<div ng-controller="RoomViewerController as vm">
+			<viewer>
+				<room path="./Stevenson/json/shells/stevenson_double.json" name="Double Room" description="One room with two beds, wardrobes, large dressers, small dressers, desks, and a microfridge. desks include a movable hutch, sliding keyboard tray, bulletin board, light, shelf, and outlet. Also includes a rolling chair, mirror in each wardrobe, one or two windows furnished with drapes, electrical outlets, Ethernet ports, and a cable TV port." hall="stevenson">
+
+				<waypoint name="test" url="akldjf" translate-x="40" translate-y="30" translate-z="40"></waypoint>
+
+					<layout name="Lofted Beds" fallback-image-path="./fallback_images/double_a.gif">
+
+						<component name="desk" path="./Stevenson/json/components/desk.json" dimensions-path="../dimensions/desk.html" translate-x="43.5" translate-y="7" translate-z="25" rotation="2"></component>
+						<component name="desk" path="./Stevenson/json/components/desk.json" dimensions-path="../dimensions/desk.html" translate-x="7" translate-y="7" translate-z="13" rotation="1"></component>
+
+						<component name="Bed" path="./Stevenson/json/components/bed_high_wood.json" translate-x="7" translate-y="9" translate-z="34.5" rotation="1" dimensions-path="../dimensions/bed.html"></component>
+						<component name="Bed" path="./Stevenson/json/components/bed_high_wood.json" translate-x="37" translate-y="9" translate-z="7.5" rotation=".5" dimensions-path="../dimensions/bed.html"></component>
+
+						<component name="Mini-Fridge" path="./Stevenson/json/components/microfridge.json" dimensions-path="../dimensions/fridge.html" translate-x="34" translate-y="7" translate-z="39" rotation="0"></component>
+
+						<component name="Wardrobe" path="./Stevenson/json/components/wardrobe.json" translate-x="21" translate-y="10" translate-z="42" rotation="1.5" dimensions-path="/dimensions/wardrobe.html"></component>
+						<component name="Wardrobe" path="./Stevenson/json/components/wardrobe.json" translate-x="48" translate-y="10" translate-z="42" rotation="1.5" dimensions-path="/dimensions/wardrobe.html"></component>
+
+						<poster path="../img/stevenson-poster.png"  width="10" height="15" translate-x="2" translate-y="21.5" translate-z="13" rotation=".5"></poster>
+						<poster path="../img/poster1.png"  width="13" height="13" translate-x="49.5" translate-y="21" translate-z="25" rotation="1.5"></poster>
+
+					</layout>
+					<layout name="Regular Beds" fallback-image-path="./fallback_images/double_a.gif">
+						<component name="desk" path="./Stevenson/json/components/desk.json" dimensions-path="/dimensions/desk.html" translate-x="7" translate-y="7" translate-z="34" rotation="1"></component>
+						<component name="desk" path="./Stevenson/json/components/desk.json" dimensions-path="/dimensions/desk.html" translate-x="38" translate-y="7" translate-z="8" rotation="1.5"></component>
+
+						<component name="Bed" path="./Stevenson/json/components/bed_low.json" dimensions-path="/dimensions/bed.html" translate-x="43.5" translate-y="9" translate-z="34" rotation="2"></component>
+						<component name="Bed" path="./Stevenson/json/components/bed_low.json" dimensions-path="/dimensions/bed.html" translate-x="7" translate-y="9" translate-z="13" rotation="1"></component>
+
+						<component name="Chair" path="./Stevenson/json/components/chair.json" translate-x="38" translate-y="5.5" translate-z="12" rotation="0"></component>
+						<component name="Chair" path="./Stevenson/json/components/chair.json" translate-x="10" translate-y="5.5" translate-z="35" rotation="1.5"></component>
+
+						<component name="Mini-Fridge" path="./Stevenson/json/components/microfridge.json" dimensions-path="/dimensions/fridge.html" translate-x="34" translate-y="7" translate-z="39" rotation="0"></component>
+
+						<component name="Door" path="./Stevenson/json/components/door2.json" translate-x="18" translate-y="13" translate-z="1.5" rotation="0.5" receive-shadow="false"></component>
+<!--						
+						<component name="Poster" path="json/posters/huskyFramed.json" translate-x="4" translate-y="23" translate-z="33" rotation="0" receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+ 						<component name="Poster" path="json/posters/altgeldFramed.json" translate-x="48.5" translate-y="22" translate-z="25" rotation="0" receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+-->
+						<component name="Rug" path="./Stevenson/json/components/rug.json" translate-x="43" translate-y="1" translate-z="7" rotation=".5"></component>
+					
+						<poster path="./img/poster2.png"  width="8" height="12" translate-x="2" translate-y="23" translate-z="14" rotation=".5"></poster>
+
+					</layout>
+				</room>
+				<room path="json/shells/stevenson_single.json" name="Single Room" description="One bed, wardrobe, desk, large dresser, small dresser, hutch, and MicroFridge. Also includes a rolling chair, mirror in wardrobe, window furnished with drapes, electrical outlets, Ethernet port, and a cable TV port." hall="Stevenson">
+					<layout name="Layout A" fallback-image-path="./img/stevenson-single.gif">
+						<component name="Mini-Fridge" path="json/components/fridge.json" dimensions-path="/dimensions/fridge.html" translate-x="29" translate-y="5.5" translate-z="7" rotation="1.50"></component>
+
+						<component name="desk" path="json/components/desk.json" dimensions-path="/dimensions/desk.html" translate-x="7" translate-y="6" translate-z="21" rotation="1"></component>
+						<component name="Chair" path="json/components/chair.json" translate-x="9" translate-y="4.5" translate-z="21" rotation="1.5"></component>
+
+						<component name="Door" path="json/components/door.json" translate-x="14" translate-y="12" translate-z="3" rotation="0.5" receive-shadow="false"></component>
+
+						<component name="Bed" path="json/components/bed_low.json" dimensions-path="/dimensions/bed.html" translate-x="26.5" translate-y="4" translate-z="32" rotation="1"></component>
+
+						<component name="Cabinet" path="json/components/cabinet.json" dimensions-path="/dimensions/wardrobe.html" translate-x="28" translate-y="9" translate-z="15" rotation="1"></component>
+						<component name="File Cabinet" path="json/components/file_cabinet.json" translate-x="5" translate-y="3" translate-z="33" rotation="1"></component>
+						<component name="Drawer" path="json/components/drawer.json" translate-x="5" translate-y="3" translate-z="40" rotation="0"></component>
+
+						<component name="Poster" path="json/posters/calderFramed.json" translate-x="2" translate-y="20" translate-z="20" rotation="0"  receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+						<component name="Poster" path="json/posters/balanceFramed.json" translate-x="32" translate-y="20" translate-z="30" rotation="0" receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+
+						<component name="Window Vent" path="json/components/vent_unit.json" translate-x="16" translate-y="5.5" translate-z="45" rotation="0"></component>
+					</layout>
+					<layout name="Layout B" fallback-image-path="./img/stevenson-single.gif">
+						<component name="Mini-Fridge" path="json/components/fridge.json" dimensions-path="/dimensions/fridge.html" translate-x="29" translate-y="5.5" translate-z="7" rotation="1.50"></component>
+
+						<component name="desk" path="json/components/desk.json" dimensions-path="/dimensions/desk.html" translate-x="7" translate-y="6" translate-z="21" rotation="1"></component>
+						<component name="Chair" path="json/components/chair.json" translate-x="9" translate-y="4.5" translate-z="21" rotation="1.5"></component>
+
+						<component name="Door" path="json/components/door.json" translate-x="14" translate-y="12" translate-z="3" rotation="0.5" receive-shadow="false"></component>
+
+						<component name="Bed" path="json/components/bed_low.json" dimensions-path="/dimensions/bed.html" translate-x="26.5" translate-y="4" translate-z="32" rotation="1"></component>
+
+						<component name="Cabinet" path="json/components/cabinet.json" dimensions-path="/dimensions/wardrobe.html" translate-x="28" translate-y="9" translate-z="15" rotation="1"></component>
+						<component name="File Cabinet" path="json/components/file_cabinet.json" translate-x="5" translate-y="3" translate-z="33" rotation="1"></component>
+						<component name="Drawer" path="json/components/drawer.json" translate-x="5" translate-y="3" translate-z="40" rotation="0"></component>
+
+						<component name="Poster" path="json/posters/calderFramed.json" translate-x="2" translate-y="20" translate-z="20" rotation="0"  receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+						<component name="Poster" path="json/posters/balanceFramed.json" translate-x="32" translate-y="20" translate-z="30" rotation="0" receive-shadow="false" lightmap-enabled="true" frontside-enabled="true"></component>
+
+						<component name="Window Vent" path="json/components/vent_unit.json" translate-x="16" translate-y="5.5" translate-z="45" rotation="0"></component>
+					</layout>
+				</room>
+			</viewer>
+		</div>
+	</div>
+
+		<script id="JSONWorker" type="javascript/worker">
+		onmessage = function(e) {
+
+			var xhr = new XMLHttpRequest();
+
+			var object = e.data[0];
+
+			object.path = "http://dev.restech.niu.edu/rooms/" + object.path;
+
+			getJSON(object);
+
+			function getJSON(object) {
+				xhr.addEventListener('load', function(ev) {
+					if (xhr.status == 200) {
+						var json = JSON.parse(xhr.response);
+
+						var properties = {};
+
+						properties.lightmapEnabled = object.lightmapEnabled;
+						properties.frontsideEnabled = object.frontsideEnabled;
+						properties.receiveShadows = object.receiveShadows;
+						properties.dimensionsPath = object.dimensionsPath;
+						
+						properties.name = object.name;
+
+						if (!json.scene) {
+							properties.translation = [
+								object.translateX * 100,
+								object.translateY * 100,
+								object.translateZ * -100,
+							];
+							properties.rotateY = object.rotation * Math.PI;   
+						}
+						
+						json.properties = properties;
+						postMessage([json]);
+					}
+				}, false);
+
+				xhr.open('GET', object.path, true);
+				
+				xhr.send(null);
+			}
+		}
+	</script>
+</body>
+
+</html>
