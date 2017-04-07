@@ -27,6 +27,14 @@ body {
 	/* IE6-9 */
 }
 
+.packages-bg {
+	background: rgb(73,155,234); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .quote-block {
 	background: white;
 	color: rgb(254, 191, 1);
@@ -66,13 +74,8 @@ body {
 	justify-content: center;
 }
 
-.skill-display {
-	display: none;
-}
 
-.skill-switcher {
-	padding-bottom: 30px;
-}
+
 
 .skill-type-button {
 	margin: 15px;
@@ -89,7 +92,7 @@ body {
 }
 
 .spacer {
-	height: 400px;
+	height: 200px;
 	background: white;
 
 	color: black;
@@ -112,21 +115,33 @@ footer {
 	font-size: 48px;
 }
 
-@media (max-width: 575px) {}
+.button {
 
-card-flip-transition {
-	animation-name: skill-transition;
-	animation-duration: 1s;
+	width: 150px;
+	margin: 10px;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+	background: rgb(255, 255, 255);
+	/* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
 }
 
-@keyframes skill-transition {
-	0% {
-		transform: rotateY(0deg);
-	}
-	50% {
-		transform: rotateY(90deg);
-	}
-	100% {
-		transform: rotateY(0deg);
-	}
+.engineering-buttons {
+	margin-top: 15px;
+}
+
+
+.fdb-image {
+	padding: 20px;
+}
+
+.modal {
+	color: black;
 }
