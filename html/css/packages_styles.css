@@ -35,3 +35,6 @@ footer {
 	display: flex;
 	justify-content: center;
 }
+.room-image {
+	padding: 25px;
+}
